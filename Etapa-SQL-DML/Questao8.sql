@@ -1,0 +1,8 @@
+/*
+(8º) Recupere o(s) nome(s) do(s) exame(s) em que o preço por atendimento está entre
+R$ 80,00 e R$ 150,00.
+*/
+SELECT DISTINCT E.NOME_EXAME
+FROM EXAME E
+JOIN EXAME_REQUERIDO_ATENDIMENTO ERA ON E.CODIGO = ERA.CODIGO_EXAME
+WHERE ERA.PRECO BETWEEN 80.00 AND 150.00;
